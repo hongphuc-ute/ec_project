@@ -31,4 +31,14 @@ public class SignupServiceImpl implements SignupService {
         return signupDAO.findAll();
     }
 
+    @Override
+    public Signup getSignupByID(int id) {
+        return signupDAO.findById(id).get();
+    }
+
+    @Override
+    public void deleteSignup(int id) {
+        signupDAO.deleteById(id);
+    }
+
 }

@@ -16,4 +16,6 @@ import java.util.List;
 public interface RoleService {
     public List<Role> getAllRole();
     public Role saveRole(Role role);
+    public void updateRole(Role role);
+    public void deleteRole(int id);
 }

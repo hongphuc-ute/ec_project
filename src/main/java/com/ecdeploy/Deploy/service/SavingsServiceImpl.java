@@ -30,5 +30,20 @@ public class SavingsServiceImpl implements SavingsService{
     public List<Savings> getAllSavings() {
         return savingsDAO.findAll();
     }
+
+    @Override
+    public void updateSavings(Savings savings) {
+        savingsDAO.save(savings);
+    }
+
+    @Override
+    public void deleteSavings(int id) {
+        savingsDAO.deleteById(id);
+    }
+
+    @Override
+    public Savings getSavingsByID(int id) {
+       return savingsDAO.findById(id).get();
+    }
     
 }

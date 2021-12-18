@@ -10,8 +10,11 @@ import com.ecdeploy.Deploy.service.SavingsService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -37,4 +40,20 @@ public class SavingsController {
     public List<Savings> getAllRole(){
         return savingsService.getAllSavings();
     }
+    
+    @PutMapping("/update")
+    public void updateSavings(@RequestBody Savings savings){
+        savingsService.updateSavings(savings);
+    }
+    
+    @DeleteMapping("/delete/{id}")
+    public void deleteSavings(@PathVariable int id){
+        savingsService.deleteSavings(id);
+    }
+    
+    @GetMapping("/getByID/{id}")
+    public Savings getSavingsByID(@PathVariable int id){
+        return savingsService.getSavingsByID(id);
+    }
+    
 }

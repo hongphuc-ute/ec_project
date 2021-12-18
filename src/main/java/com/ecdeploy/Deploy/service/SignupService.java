@@ -15,4 +15,7 @@ import java.util.List;
 public interface SignupService {
     public Signup saveSignup(Signup signup);
     public List<Signup> getAllSignup();
+    public Signup getSignupByID(int id);
+    public void deleteSignup(int id);
+    
 }

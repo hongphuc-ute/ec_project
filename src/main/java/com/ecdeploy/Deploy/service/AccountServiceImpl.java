@@ -31,5 +31,20 @@ public class AccountServiceImpl implements AccountService{
     public Account saveAccount(Account account) {
         return accountDAO.save(account);
     }
+
+    @Override
+    public Account getAccountByID(int id) {
+        return accountDAO.findById(id).get();
+    }
+
+    @Override
+    public void updateAccount(Account account) {
+        accountDAO.save(account);
+    }
+
+    @Override
+    public void deleteAccount(int id) {
+        accountDAO.deleteById(id);
+    }
     
 }

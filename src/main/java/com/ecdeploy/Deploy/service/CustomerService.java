@@ -15,5 +15,7 @@ import java.util.List;
 public interface CustomerService {
     public Customer saveCustomer(Customer customer);
     public List<Customer> getAllCustomer();
-
+    public Customer getCustomerByID(int id);
+    public void updateCustomer(Customer customer);
+    public void deleteCustomer(int id);
 }

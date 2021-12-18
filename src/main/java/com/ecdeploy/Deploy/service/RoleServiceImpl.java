@@ -32,4 +32,14 @@ public class RoleServiceImpl implements RoleService {
         return roleDAO.save(role);
     }
 
+    @Override
+    public void updateRole(Role role) {
+        roleDAO.save(role);
+    }
+
+    @Override
+    public void deleteRole(int id) {
+        roleDAO.deleteById(id);
+    }
+
 }

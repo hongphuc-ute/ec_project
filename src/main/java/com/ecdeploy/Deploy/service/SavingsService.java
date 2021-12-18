@@ -13,6 +13,15 @@ import java.util.List;
  * @author PhucNguyen
  */
 public interface SavingsService {
+
     public Savings saveSavings(Savings savings);
+
     public List<Savings> getAllSavings();
+
+    public void updateSavings(Savings savings);
+
+    public void deleteSavings(int id);
+    
+    public Savings getSavingsByID(int id);
+
 }

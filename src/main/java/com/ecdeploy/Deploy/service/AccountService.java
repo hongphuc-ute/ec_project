@@ -15,4 +15,8 @@ import java.util.List;
 public interface AccountService {
     public List<Account> getAllAccount();
     public Account saveAccount(Account account);
+    public Account getAccountByID(int id);
+    public void updateAccount(Account account);
+    public void deleteAccount(int id);
+    
 }
