@@ -47,6 +47,7 @@ public class AccountController {
     public Account getAccountByID(@PathVariable int id) {
         return accountService.getAccountByID(id);
     }
+    
     @PutMapping("/update")
     public void updateAccount(@RequestBody Account account){
         accountService.updateAccount(account);
