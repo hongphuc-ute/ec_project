@@ -41,22 +41,27 @@ public class AccountController {
     @GetMapping("/getAll")
     public List<Account> getAllAccount() {
         return accountService.getAllAccount();
+
     }
 
     @GetMapping("/getByID/{id}")
     public Account getAccountByID(@PathVariable int id) {
         return accountService.getAccountByID(id);
     }
-    
+
     @PutMapping("/update")
-    public void updateAccount(@RequestBody Account account){
+    public void updateAccount(@RequestBody Account account) {
         accountService.updateAccount(account);
     }
 
     @DeleteMapping("/delete/{id}")
-    public void deleteAccount(@PathVariable int id){
+    public void deleteAccount(@PathVariable int id) {
         accountService.deleteAccount(id);
     }
-    
-    
+
+    @GetMapping("/hello")
+    public String sayhello() {
+        return "hello word!";
+    }
+
 }

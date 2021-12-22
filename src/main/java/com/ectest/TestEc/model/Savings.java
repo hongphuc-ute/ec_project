@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package com.ectest.TestEc.model;
+
 import java.io.Serializable;
 import java.util.Date;
 import javax.persistence.Basic;
